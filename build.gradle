@@ -1,13 +1,13 @@
 buildscript {
 
-    ext.junit_version = '5.0.2'
+    ext.junit_version = '5.0.1'
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.1'
     }
 }
 
@@ -21,6 +21,12 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
+    distributionUrl = "https://services.gradle.org/distributions/" +
+            "gradle-${gradleVersion}-all.zip"
 }
 
 dependencies {
